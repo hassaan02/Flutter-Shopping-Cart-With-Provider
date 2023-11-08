@@ -10,7 +10,7 @@ class ProductListScreen extends StatefulWidget {
 
 class _ProductListScreenState extends State<ProductListScreen> {
   List<String> productName = [
-    'Mango',
+    'Mangoe',
     'Orange',
     'Grapes',
     'Banana',
@@ -105,6 +105,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                           height: 5,
                                         ),
                                         Text(
+                                          // ignore: prefer_interpolation_to_compose_strings
                                           productUnit[index].toString() +
                                               " " +
                                               r"$" +
@@ -116,7 +117,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                             fontStyle: FontStyle.italic
                                           ),
                                         ),
-                                         SizedBox(
+                                        const SizedBox(
                                           height: 5,
                                         ),
                                         Align(
