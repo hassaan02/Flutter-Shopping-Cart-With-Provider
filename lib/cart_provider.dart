@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shopping_project/data_base.dart';
 
 class CartProvider with ChangeNotifier {
-  DBhelper db = DBhelper();
+  DBHelper db = DBHelper();
   int _counter = 0;
   int get counter => _counter;
 
