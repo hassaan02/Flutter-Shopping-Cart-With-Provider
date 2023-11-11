@@ -47,4 +47,10 @@ Future<Cart> insert(Cart cart) async {
   return cart;
 }
 
+Future<List> getCartList() async {
+  var dbClient = await db;
+  final List<Map< String, Object?>> queryResult = await dbClient!.query("cart");
+  return queryResult.map((e) => Cart.fromMap(e)).toList();
+}
+
 }

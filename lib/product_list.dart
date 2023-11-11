@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:provider/provider.dart';
 import 'package:shopping_project/cart_model.dart';
+import 'package:shopping_project/cart_screen.dart';
 import 'package:shopping_project/data_base.dart';
 import 'cart_provider.dart';
 
@@ -53,7 +54,10 @@ class _ProductListScreenState extends State<ProductListScreen> {
           title: const Text("All Products"),
           centerTitle: true,
           actions: [
-            Center(
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+              },
               child: badges.Badge(
                 badgeContent: Consumer<CartProvider>(
                   builder: (context, value, child) {
